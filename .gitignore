@@ -1,0 +1,6 @@
+
+*.json
+output/*
+downloads/*
+*.log
+*.lock

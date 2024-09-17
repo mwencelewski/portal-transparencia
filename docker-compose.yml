@@ -1,0 +1,16 @@
+version: "3"
+services:
+  # Serviço do seu projeto
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+      - "9200:9200"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+networks:
+  default:
+    driver: bridge
