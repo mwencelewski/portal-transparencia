@@ -1,3 +1,9 @@
+
+"""
+Selectors module for the dwlaw-transparencia project.
+
+Contains XPath and CSS selectors used to locate elements on web pages.
+"""
 TITULO = "table.titulo_superior"
 PESQUISA = "//div[@class='input-group custom-search-form']//div[@class='visible-lg']//input[contains(@class,'form-control ng-pristine')]"
 

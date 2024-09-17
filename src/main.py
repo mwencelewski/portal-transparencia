@@ -1,3 +1,19 @@
+"""
+Main Workflow
+This function is the main workflow of the program. It processes the given process number and performs the following steps:
+1. Searches for the process number in the transparency system.
+2. If the process number is found, opens the process.
+3. Extracts initial data and movement data from the process.
+4. Saves the extracted data as a JSON file.
+5. Closes the transparency system.
+Parameters:
+- processo (str): The process number to be processed.
+- headless (bool): Flag indicating whether to run the process in headless mode or not. Defaults to True.
+Returns:
+None
+Raises:
+- Exception: If no process number is provided.
+"""
 from libs import transpacencia
 from commons import config
 from loguru import logger as log
@@ -47,13 +63,7 @@ def main_workflow(processo: str = "", headless: bool = True):
 
 
 if __name__ == "__main__":
-    """
-    CLI para execução da automação 
-    params:
-        -p: processo
-        -f: arquivo com lista de processos
-        -d: debug 
-    """
+    
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
